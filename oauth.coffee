@@ -1,5 +1,5 @@
 oauthserver = Npm.require('oauth2-server')
-express = Npm.require('express')*
+express = Npm.require('express')
 bodyParser = Npm.require('body-parser')
 
 
