@@ -1,5 +1,7 @@
 oauthserver = Npm.require('oauth2-server')
-express = Npm.require('express')
+express = Npm.require('express')*
+bodyParser = Npm.require('body-parser')
+
 
 # WebApp.rawConnectHandlers.use app
 # JsonRoutes.Middleware.use app
@@ -10,6 +12,7 @@ class OAuth2Server
 		@app = express()
 
 		@routes = express()
+		@app.use(bodyParser.urlencoded({ extended: false}))
 
 		@model = new Model(@config)
 
